@@ -1,3 +1,16 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+.router-link-active, .router-link-exact-active {
+    @apply bg-indigo-900
+}
+
+.btn {
+    @apply block px-4 py-3 rounded transition-all duration-150 ease-linear
+}
+
+.btn-primary {
+    @apply bg-indigo-500 text-indigo-50 hover:bg-indigo-700
+}

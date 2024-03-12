@@ -5,7 +5,11 @@ export default {
     "./src/**/*.{vue,js,ts,jsx,tsx}",
   ], 
   theme: {
-    extend: {},
+    extend: {
+      backgroundImage: {
+        "header-image": "url('./src/assets/header-image.jpg')"
+      }
+    },
   },
   plugins: [],
 }
