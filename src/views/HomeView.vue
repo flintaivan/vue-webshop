@@ -42,24 +42,44 @@
         </div>
 
         <!-- Products section start -->
-        <div class="bg-indigo-950 text-indigo-50 h-auto">
-            <div class="container-xl max-w-screen-xl mx-auto py-16 px-4">
+        <div class="bg-indigo-950 text-indigo-50 h-auto pb-20">
+            <div class="container-xl max-w-screen-xl mx-auto py-20 px-4">
                 <h2 class="pb-16 text-center">Check out logi products</h2>
-                <div class="flex flex-wrap space-x-6 items-center justify-center">
-                    <ProductItemComponent />
-                    <ProductItemComponent />
-                    <ProductItemComponent />
-                </div>
+                <ProductSwiper />
             </div>
         </div>
         <!-- Products section end -->
+        
+        <!-- Newsletter section start -->
+        <div class="bg-indigo-300 text-indigo-50">
+            <div class="container-xl max-w-screen-xl mx-auto py-16 px-4 flex items-end justify-center space-x-10">
+                <div>
+                    <span class="text-xl font-bold">Want 15% off?</span>
+                    <h2 class="font-bold">Register to our newsletter</h2>
+                </div>
+                <div>
+                    <form action="" class="flex items-end space-x-5">
+                        <div class="flex flex-col">
+                            <!-- <label for="email">Email</label> -->
+                            <input type="text" class="rounded p-3" placeholder="Email">
+                        </div>
+                        <div>
+                            <button class="btn btn-primary">Register</button>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!-- Newsletter section end -->
 
     </div>
 </template>
 
 <script>
 // Components
-import ProductItemComponent from '../components/Product/ProductItemComponent.vue'
+import ProductItemComponent from '../components/Product/ProductItemComponent.vue';
+import ProductSwiper from '../components/Swiper/ProductSwiper.vue';
 // Icons
 import { Icon } from '@iconify/vue';
 
@@ -67,6 +87,7 @@ export default {
     components: {
         Icon,
         ProductItemComponent,
+        ProductSwiper,
     },
 }
 </script>
