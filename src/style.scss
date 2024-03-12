@@ -1,7 +1,39 @@
+@tailwind utilities;
 @tailwind base;
 @tailwind components;
-@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
+
+@font-face {
+    font-family: 'Roboto';
+    src: url();
+}
+
+body {
+    @apply bg-indigo-50 text-indigo-950;
+    font-family: 'Montserrat', sans-serif;
+    
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Roboto', sans-serif;
+}
+
+h1 {
+    @apply text-6xl
+}
+h2 {
+    @apply text-3xl
+}
+h3 {
+    @apply text-2xl
+}
+h4 {
+    @apply text-xl
+}
+h5 {
+    @apply text-lg
+}
 
 .router-link-active, .router-link-exact-active {
     @apply bg-indigo-900
@@ -13,4 +45,7 @@
 
 .btn-primary {
     @apply bg-indigo-500 text-indigo-50 hover:bg-indigo-700
+}
+.btn-primary-outline {
+    @apply border-2 border-indigo-500 text-indigo-700 hover:bg-indigo-700 hover:text-indigo-50
 }
