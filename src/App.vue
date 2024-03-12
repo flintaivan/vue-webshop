@@ -1,10 +1,21 @@
 <template>
   <div>
-    <h1 class="text-2xl">Text</h1>
+    <HeaderComponent />
+      <router-view></router-view>
+      <FooterComponent />
   </div>
 </template>
 
-<script setup>
+<script>
+// Components
+import HeaderComponent from './components/Header/HeaderComponent.vue'
+import FooterComponent from './components/Footer/FooterComponent.vue';
+export default {
+  components: {
+    HeaderComponent,
+    FooterComponent
+  }
+}
 </script>
 
 
