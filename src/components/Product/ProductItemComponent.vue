@@ -1,5 +1,5 @@
 <template>
-    <div class="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow">
+    <div class="w-full max-w-sm bg-indigo-50 border border-gray-200 rounded-lg shadow">
         <a href="#">
             <img class="pb-4 rounded-t-lg" :src="image" alt="product image" />
         </a>
@@ -18,7 +18,7 @@
                 <span class="text-xs font-semibold px-2.5 py-0.5 rounded dark:bg-indigo-200 dark:text-indigo-800 ms-3">4.0</span>
             </div>
             <div class="flex items-center justify-between">
-                <span class="text-3xl font-bold text-indigo-500">${{ price }}</span>
+                <span class="text-2xl font-bold text-indigo-500">${{ price }}</span>
                 <a href="#" class="flex items-center btn-primary rounded px-4 py-2 space-x-2">
                     <Icon icon="ion:cart" class="w-4 h-4" />
                     <span>Add to cart</span>
