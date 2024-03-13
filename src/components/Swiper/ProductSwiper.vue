@@ -47,10 +47,8 @@ export default {
         'https://placehold.co/600x400',
       ]
       const onSwiper = (swiper) => {
-        console.log(swiper);
       };
       const onSlideChange = () => {
-        console.log('slide change');
       };
       return {
         images,
