@@ -1,8 +1,9 @@
 <template>
   <div>
     <HeaderComponent :isHomepage="isHomepage()" />
-      <router-view></router-view>
-      <FooterComponent />
+    <router-view></router-view>
+    <CartContainerComponent />
+    <FooterComponent />
   </div>
 </template>
 
@@ -13,10 +14,13 @@ import { watch } from 'vue';
 // Components
 import HeaderComponent from './components/Header/HeaderComponent.vue'
 import FooterComponent from './components/Footer/FooterComponent.vue';
+import CartContainerComponent from './components/Cart/CartContainerComponent.vue';
+
 export default {
   components: {
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    CartContainerComponent,
   },
   setup() {
     const route = useRoute()
