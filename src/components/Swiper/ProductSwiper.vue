@@ -10,8 +10,8 @@
       @swiper="onSwiper"
       @slideChange="onSlideChange"
     >
-      <SwiperSlide v-for="(image, index) in images" :key="index">
-        <ProductItemComponent title="Some title" price="523" :image="image" />
+      <SwiperSlide v-for="prod in products" :key="prod.id">
+        <ProductItemComponent :prod="prod" />
       </SwiperSlide>
     </Swiper>
     <div class="swiper-button-next"></div>
@@ -22,10 +22,14 @@
 
 
 <script>
+// Vue core
+import { ref, onMounted, watch } from 'vue';
 // Import Components
 import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/vue';
 import ProductItemComponent from '../Product/ProductItemComponent.vue'
+// Stores
+import useProductStore from '../../store/productsStore'
 // Import Swiper styles
 import 'swiper/scss';
 import 'swiper/scss/navigation';
@@ -39,19 +43,20 @@ export default {
       ProductItemComponent,
     },
     setup() {
-      const images = [
-        'https://placehold.co/600x400',
-        'https://placehold.co/600x400',
-        'https://placehold.co/600x400',
-        'https://placehold.co/600x400',
-        'https://placehold.co/600x400',
-      ]
+      const productsStore = useProductStore();
+      const products = ref([])
+      onMounted(async () => {
+          await productsStore.fetchProducts()
+      })
+      watch(() => productsStore.items, (newItems) => {
+          products.value = newItems.slice(0, 8)
+      })
       const onSwiper = (swiper) => {
       };
       const onSlideChange = () => {
       };
       return {
-        images,
+        products,
         onSwiper,
         onSlideChange,
         modules: [Navigation, Pagination, Scrollbar, A11y],
