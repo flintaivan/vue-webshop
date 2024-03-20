@@ -51,7 +51,7 @@
         <!-- Products section end -->
         
         <!-- Newsletter section start -->
-        <div class="bg-indigo-300 text-indigo-50">
+        <div class="bg-orange-300 text-indigo-950">
             <div class="container-xl max-w-screen-xl mx-auto py-16 px-4 flex items-end justify-center space-x-10">
                 <div>
                     <span class="text-xl font-bold">Want 15% off?</span>

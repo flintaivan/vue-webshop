@@ -1,9 +1,9 @@
 <template>
        <div class="container-xl max-w-screen-xl mx-auto py-20 px-4">
         <div class="flex">
-            <div :class="['mt-2 sticky top-20 left-0 flex-shrink-0 transition-all duration-300 ease-out transform shadow-lg py-3 px-3 rounded-xl bg-indigo-200', sidebarOpen ? 'w-64 h-96' : 'w-16 h-16']">
+            <div :class="['mt-2 sticky top-20 left-0 flex-shrink-0 transition-all duration-300 ease-out transform shadow-lg py-3 px-3 rounded-xl bg-orange-300', sidebarOpen ? 'w-64 h-96' : 'w-16 h-16']">
                 <button @click="toggleSidebar" :class="['flex items-center justify-center']">
-                    <Icon icon="mage:filter-fill" :class="[sidebarOpen ? 'transition-all duration-300 ease-out rotate-90' : '', 'w-10 h-10 text-indigo-50']" />
+                    <Icon icon="mage:filter-fill" :class="[sidebarOpen ? 'transition-all duration-300 ease-out rotate-90' : '', 'w-10 h-10 text-indigo-950']" />
                 </button>
                 <SidebarComponent v-if="sidebarOpen" />
             </div>

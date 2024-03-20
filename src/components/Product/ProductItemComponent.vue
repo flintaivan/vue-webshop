@@ -18,8 +18,8 @@
                 <span class="text-xs font-semibold px-2.5 py-0.5 rounded dark:bg-indigo-200 dark:text-indigo-800 ms-3">{{prod.rating}}</span>
             </div>
             <div class="flex items-center justify-between">
-                <span class="text-2xl font-bold text-indigo-500">${{ prod.price }}</span>
-                <a href="#" @click.prevent="addToCart(prod)" class="flex items-center btn-primary rounded px-4 py-2 space-x-2">
+                <span class="text-2xl font-bold text-indigo-300">${{ prod.price }}</span>
+                <a href="#" @click.prevent="addToCart(prod)" class="flex items-center bg-orange-300 text-indigo-950 hover:bg-orange-400 rounded px-4 py-2 space-x-2">
                     <Icon icon="ion:cart" class="w-4 h-4" />
                     <span>Add to cart</span>
                 </a>
